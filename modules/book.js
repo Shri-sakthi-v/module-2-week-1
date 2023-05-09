@@ -5,7 +5,7 @@ export default class Book {
   }
 
   // getbook  method
-  static getBooks() {
+  static getBooks =() => {
     let books;
     if (localStorage.getItem('books') === null) {
       books = [];
@@ -16,14 +16,14 @@ export default class Book {
   }
 
   // addbook  method
-  static addBook(book) {
+  static addBook =(book) => {
     const books = Book.getBooks();
     books.push(book);
     localStorage.setItem('books', JSON.stringify(books));
   }
 
   // removeBook method
-  static removeBook(author) {
+  static removeBook =(author) => {
     const books = Book.getBooks();
 
     books.forEach((book, index) => {
@@ -35,7 +35,7 @@ export default class Book {
   }
 
   // addbook to list method
-  static addBookToList(book) {
+  static addBookToList = (book) => {
     const list = document.querySelector('#bookOfList');
 
     const listItem = document.createElement('div');
@@ -47,14 +47,14 @@ export default class Book {
   }
 
   // displayBook method
-  static displayBooks() {
+  static displayBooks =() => {
     const books = Book.getBooks();
 
     books.forEach((book) => Book.addBookToList(book));
   }
 
   // deleteBook method
-  static deleteBook(eliminate) {
+  static deleteBook =(eliminate) => {
     if (eliminate.classList.contains('remove')) {
       eliminate.parentElement.remove();
     }

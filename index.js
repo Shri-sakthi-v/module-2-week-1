@@ -28,11 +28,7 @@ const date = DateTime.now().toLocaleString(DateTime.DATE_FULL);
 const time = now.toLocaleTimeString();
 document.querySelector('#date').textContent = `${date} ${time}`;
 
-//  navigation
 
-// const bookListSection = document.getElementById('booklist');
-// const addNewBookSection = document.getElementById('addnewbook');
-// const contactSection = document.getElementById('contact');
 
 const sections = document.querySelectorAll('section');
 const links = document.querySelectorAll('a[href^="#"]');
