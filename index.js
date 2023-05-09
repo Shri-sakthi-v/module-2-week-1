@@ -28,8 +28,6 @@ const date = DateTime.now().toLocaleString(DateTime.DATE_FULL);
 const time = now.toLocaleTimeString();
 document.querySelector('#date').textContent = `${date} ${time}`;
 
-
-
 const sections = document.querySelectorAll('section');
 const links = document.querySelectorAll('a[href^="#"]');
 
